@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Oscar’s personal website and blog.">
+<title>Oscar — About &amp; Blog</title>
+<style>
+:root {
+  color-scheme: light;
+  --paper: #f3f4ee;
+  --ink: #182b25;
+  --muted: #4c6158;
+  --line: #cbd4ca;
+  --accent: #265d4a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.65 system-ui, sans-serif; }
+.wrap { width: min(100% - 3rem, 62rem); margin-inline: auto; }
+header, footer { border-block-end: 1px solid var(--line); }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.15rem; }
+nav { display: flex; gap: 1.5rem; }
+a { color: var(--accent); text-underline-offset: .25em; }
+a:hover { color: var(--ink); }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: .3rem; }
+.brand { color: var(--ink); font-weight: 700; }
+.hero { padding-block: clamp(4rem, 13vw, 9rem); }
+.eyebrow { color: var(--accent); font-size: .875rem; letter-spacing: .13em; text-transform: uppercase; font-weight: 650; }
+h1, h2 { font-family: Georgia, serif; font-weight: 400; line-height: 1.05; letter-spacing: -.045em; margin: 0; }
+h1 { font-size: clamp(3.5rem, 11vw, 8rem); }
+h2 { font-size: clamp(2.8rem, 7vw, 4.75rem); }
+.hero p:not(.eyebrow) { max-width: 38rem; font-size: clamp(1.1rem, 3vw, 1.35rem); color: var(--muted); margin-block: 1.4rem 2rem; }
+.button { display: inline-block; padding: .65rem 1.1rem; background: var(--accent); color: white; text-decoration: none; border-radius: .25rem; }
+.button:hover { background: var(--ink); color: white; }
+.blog { border-block-start: 1px solid var(--line); padding-block: 3rem 5rem; }
+.blog > p { color: var(--muted); margin-block-end: 2rem; }
+article { border-block-start: 1px solid var(--line); }
+article:last-child { border-block-end: 1px solid var(--line); }
+summary { cursor: pointer; padding-block: 1.3rem; }
+summary h3 { display: inline; font: 400 1.5rem Georgia, serif; }
+summary span { display: block; color: var(--muted); padding-inline-start: 1rem; }
+details > p { max-width: 39rem; margin: 0 0 1.5rem 1rem; }
+footer { border-block: 1px solid var(--line) 0; color: var(--muted); }
+footer a { white-space: nowrap; }
+@media (max-width: 34rem) { .wrap { width: calc(100% - 2rem); } nav { gap: 1rem; } }
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Oscar Knight</a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#blog">Blog</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="about" class="hero" aria-labelledby="intro">
+    <p class="eyebrow">About me</p>
+    <h1 id="intro">What's up with Oscar?</h1>
+    <!-- Replace this paragraph with your own bio. -->
+    <p>I'm a mechanical engineering student at the University of Cape Town. This is a (mostly) personal space for things I’m learning, ideas I want to explore, and maybe a few projects from along the way (if I bother to do any).</p>
+    <a class="button" href="#blog">Read a little</a>
+  </section>
+  <section id="blog" class="blog" aria-labelledby="blog-title">
+    <h2 id="blog-title">Blog</h2>
+    <p>Writing and stuff?</p>
+    <!-- Add a post by copying an article below. Put the newest post first. -->
+    <!-- 
+    <article>
+      <details>
+        <summary><h3>TITLE</h3><span>TAG · SUBTITLE</span></summary>
+        <p>PARAGRAPH 1</p>
+        <p>PARAGRAPH 2</p>
+      </details>
+    </article>
+    -->
+    <article>
+      <details>
+        <summary><h3>Starting a small blog</h3><span>Sample post · Why keep a public notebook?</span></summary>
+        <p>A short note can capture what a finished project leaves out. What did I try first? Which assumption held up? What would I do differently next time? Those are the details worth coming back to.</p>
+        <p>A photo and a few sentences can be enough. The goal is to write while the details are still fresh.</p>
+      </details>
+    </article>
+    <article>
+      <details>
+        <summary><h3>Sketch the boundary first</h3><span>Sample post · A thermodynamics study note</span></summary>
+        <p>Before writing an energy balance, draw a line around the part of the problem you want to study. For a turbine, that might be a boundary that encloses the casing and cuts across the inlet and outlet.</p>
+        <p>Then mark what crosses the line. The mass streams carry energy, the shaft can deliver work, and heat can cross the casing. That sketch gives each term in the balance a physical meaning.</p>
+      </details>
+    </article>
+  </section>
+</main>
+<footer><div class="wrap bar"><span>Oscar Knight 2026</span><a href="#top">Back to top</a></div></footer>
+</body>
+</html>
